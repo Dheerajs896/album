@@ -7,6 +7,10 @@ export default class App extends React.Component {
     return (
       <View>
         <Header />
+        <Header />
+        <Header />
+        <Header />
+        <Header />
       </View>
     );
   }
