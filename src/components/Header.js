@@ -6,7 +6,7 @@ const Header = (props)=>{
     const {textStyle , viewStyle} = styles;
     return (
         <View style ={viewStyle} >
-            <Text style={textStyle}>Album</Text>
+            <Text style={textStyle}>{props.getHeader}</Text>
         </View>
     );
 };
@@ -18,11 +18,16 @@ const styles = StyleSheet.create({
 
     },
     viewStyle : {
+        backgroundColor: '#F8F8F8',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop:30,
-        height:60,
-        backgroundColor: '#F8F8F8',
+        height: 60,
+        paddingTop: 15,
+        shadowColor: '#000',
+        shadowOffset: {width: 1 , height: 0.20},
+        shadowOpacity: 0.9,
+        elevation: 2,
+        position: 'relative'
       
     }
 }); 
