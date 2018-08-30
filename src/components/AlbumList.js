@@ -1,16 +1,17 @@
 import React,{ Component } from 'react';
 import {View , Text} from 'react-native';
+import AlbumDetails from './AlbumDetails';
 
 
 class AlbumList extends Component{
-	componentWillMount() {
+	// componentWillMount() {
 		
-	}
+	// }
 
 	render(){
 		return (
 			<View>
-				<Text>AlbumList</Text>
+				<AlbumDetails title={'Title'} Name = {'Dheeraj Singh'} />
 			</View>
 		);
 
