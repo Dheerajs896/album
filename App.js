@@ -10,9 +10,6 @@ export default class App extends React.Component {
       <View>
         <Header getHeader= {'Album'} />
         <AlbumList  />
-        <AlbumList />
-        <AlbumList />
-        <AlbumList />
       </View>
     );
   }
