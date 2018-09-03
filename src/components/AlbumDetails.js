@@ -4,7 +4,8 @@ import Card from './Card';
 import CardSection from './CardSection';
 
 
-const AlbumList = (props) => {
+const AlbumList = ({ album }) => {
+	const {title , artist , thumbnail_image , image , url} = album;
 	const {thumbNail , 
 			headerContainerStyle,
 			thumbNailContainer,
@@ -16,18 +17,20 @@ const AlbumList = (props) => {
 					<View style={thumbNailContainer}>
 						<Image
 						style={thumbNail} 
-						source={require('../../Image/1.jpg')} />
+						source={{uri: thumbnail_image}} />
 					</View>
 					<View style={headerContainerStyle}>
-						<Text style={headerTextStyle}>{props.title}</Text>
-                        <Text>{props.Name}</Text>
+						<Text style={headerTextStyle}>{title}</Text>
+                        <Text>{artist}</Text>
 					</View>
 				</CardSection>
+
 				<CardSection>
 					<Image 
 					style={imageStyle}
-					source={require('../../Image/1.jpg')} />
+					source={{uri : image}} />
 				</CardSection>
+
 				<CardSection>
 					<Text>Click Me!!</Text>
 				</CardSection>
