@@ -8,12 +8,12 @@ class AlbumList extends Component{
 	state = {albums : []};
 	componentWillMount() {
 		axios.get('http://rallycoding.herokuapp.com/api/music_albums')
-		.then(response=>this.setState({album: response.data}));
+		.then(response=>this.setState({albums: response.data}));
 	}
 
 	reanderAlbum() {
 		return this.state.albums.map(album =>
-			<AlbumDetails key={album.title} album={album} />
+			<AlbumDetails key={album.title} albumData={album} />
 		);
 	}
 
